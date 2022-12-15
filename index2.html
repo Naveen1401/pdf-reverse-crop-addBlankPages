@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add black pages</title>
+    <style>
+      #main_container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .page_div{
+        margin-left: 20px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+      }
+      .page_num_display {
+        right: 70px;
+        bottom: 20px;
+        position: relative;
+        padding: 1px 5px;
+        background: rgba(36, 36, 36, 0.5);
+        border-radius: 3px;
+        color: white;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      canvas {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+      .blank_canvas{
+          margin-right: 20px;
+      }
+      .checkbox_input{
+          display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <button onclick="modifyPdf()">Create PDF</button> -->
+    <input id="pdff" type="file" name="upload" accept="application/pdf" onchange="file(this)"/>
+    <button onclick="btw_all()">Add between all</button>
+    <button onclick="modify()">Create PDF</button>
+
+    <div id="main_container"></div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/pdf-lib/dist/pdf-lib.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
+      integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.12.313/pdf.sandbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.12.313/build/pdf.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/2.0.0-alpha.2/cropper.min.js"
+      integrity="sha512-IlZV3863HqEgMeFLVllRjbNOoh8uVj0kgx0aYxgt4rdBABTZCl/h5MfshHD9BrnVs6Rs9yNN7kUQpzhcLkNmHw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/2.0.0-alpha.2/cropper.css"
+      integrity="sha512-5ZQRy5L3cl4XTtZvjaJRucHRPKaKebtkvCWR/gbYdKH67km1e18C1huhdAc0wSnyMwZLiO7nEa534naJrH6R/Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="/script2.js"></script>
+  </body>
+</html>
